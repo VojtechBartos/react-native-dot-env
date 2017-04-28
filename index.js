@@ -7,7 +7,7 @@ import { NativeModules } from 'react-native'
  * @return {Promise}
  */
 export default async function (file = 'environment') {
-  const env = await NativeModules.RNDotEnv.loadPlist(file)
+  const env = await NativeModules.RNDotEnv.load(file)
 
   process.env = {
     ...process.env,

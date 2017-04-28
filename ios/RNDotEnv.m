@@ -11,28 +11,18 @@
 
 RCT_EXPORT_MODULE()
 
-
-
-RCT_REMAP_METHOD(loadPlist:(NSString *)plistName,
-                 resolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(load:(NSString *)reference
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:reference ofType:@"plist"];
     NSDictionary *env = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    if (!plistPath && !env) {
+        reject(@"no_ref", @"Environment file not found.", nil);
+    }
 
     resolve(env);
-
-
-//    NSArray *events = ...
-//    if (events) {
-//        resolve(events);
-//    } else {
-//        NSError *error = ...
-//        reject(@"no_events", @"There were no events", error);
-//    }
 }
-
-
 
 - (dispatch_queue_t)methodQueue
 {
