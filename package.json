@@ -1,0 +1,29 @@
+{
+  "name": "react-native-dot-env",
+  "version": "0.0.1",
+  "description": "Loads environment variables from a .env file into process.env through native property list.",
+  "homepage": "https://github.com/VojtechBartos/react-native-dot-env",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/VojtechBartos/react-native-dot-env.git"
+  },
+  "keywords": [
+    "react-native",
+    "dotenv",
+    "env",
+    ".env",
+    "environment",
+    "variables"
+  ],
+  "author": "Vojtech Bartos <hi@vojtech.me>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "minimist": "^1.2.0",
+    "plist": "^2.0.1"
+  },
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  }
+}
