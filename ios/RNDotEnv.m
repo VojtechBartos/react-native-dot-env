@@ -19,7 +19,7 @@ RCT_EXPORT_METHOD(load:(NSString *)reference
     NSDictionary *env = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
 
     if (plistPath) {
-        resolve(env)
+        resolve(env);
     }
     else {
         reject(@"no_ref", @"Environment file not found.", nil);
