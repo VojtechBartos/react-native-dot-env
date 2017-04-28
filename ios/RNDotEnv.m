@@ -17,11 +17,13 @@ RCT_EXPORT_METHOD(load:(NSString *)reference
 {
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:reference ofType:@"plist"];
     NSDictionary *env = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    if (!plistPath && !env) {
+
+    if (plistPath) {
+        resolve(env)
+    }
+    else {
         reject(@"no_ref", @"Environment file not found.", nil);
     }
-
-    resolve(env);
 }
 
 - (dispatch_queue_t)methodQueue
