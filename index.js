@@ -1,7 +1,8 @@
 import { NativeModules } from 'react-native'
 
 /**
- * [description]
+ * Loading environment variables via native module from prebundled config
+ * file
  * @param  {String} environment file name without extension, it will be
  *                  specified by platform
  * @return {Promise}
