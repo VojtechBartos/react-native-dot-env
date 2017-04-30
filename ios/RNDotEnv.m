@@ -26,6 +26,14 @@ RCT_EXPORT_METHOD(load:(NSString *)reference
     }
 }
 
+- (NSDictionary *)constantsToExport
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@".env" ofType:@"plist"];
+    NSDictionary *env = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+
+    return env ?: @{};
+}
+
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();

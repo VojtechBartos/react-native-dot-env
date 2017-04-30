@@ -47,3 +47,4 @@ buck-out/
 # dotenv (testing purposes)
 .env
 .env.plist
+!example/.env
