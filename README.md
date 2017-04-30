@@ -1,5 +1,11 @@
 # React Native dotenv
 
+Add .env support to your react-native application without exposing them in JavaScript bundle.
+
+## Motivation
+
+TBD
+
 ## Installation
 
 ```sh

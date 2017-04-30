@@ -1,7 +1,7 @@
 {
   "name": "react-native-dot-env",
   "version": "0.0.1",
-  "description": "Loads environment variables from a .env file into process.env through native property list.",
+  "description": "Add .env support to your react-native application without exposing them in JavaScript bundle.",
   "homepage": "https://github.com/VojtechBartos/react-native-dot-env",
   "main": "index.js",
   "repository": {
