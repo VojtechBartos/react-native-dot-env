@@ -937,7 +937,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "nvm use stable\n/Users/vojta/.nvm/versions/node/v7.4.0/bin/node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT";
+			shellScript = "node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT";
 		};
 /* End PBXShellScriptBuildPhase section */
 
