@@ -1,4 +1,4 @@
-# React-native dotenv
+# React Native dotenv
 
 ## Installation
 
