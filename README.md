@@ -72,8 +72,17 @@ Sorry, Android is not supported yet.
   ```sh
   node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT
   ```
+6. Add to application source code
 
-6. Run App
+  ```js
+  import dotenv from 'react-native-dot-env'
+
+  dotenv()
+
+  console.log(process.env)
+  ```
+
+7. Run App
 
   ```sh
   react-native run-ios
