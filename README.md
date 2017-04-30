@@ -1,16 +1,86 @@
+# React-native dotenv
 
-# react-native-dot-env
+## Installation
+
+```sh
+yarn add react-native-dot-env
+# or
+npm install --save react-native-dot-env
+```
+
+### Automatically link
+
+```sh
+react-native link react-native-dot-env
+```
+
+### Manually
+
+#### iOS with CocoaPods
+
+Add the following line to your build targets in your `Podfile`
+
+`pod 'RNDotEnv', :path => '../node_modules/react-native-dot-env/ios'`
+
+Then run `pod install`
+
+#### Android
+
+Sorry, Android is not supported yet.
 
 ## Getting started
 
-`$ npm install react-native-dot-env --save`
+1. Create a new React Native App
 
+  ```sh
+  react-native init SimpleApp
+  cd SimpleApp
+  ```
+
+2. Install the latest version of react-native-dot-env
+
+  ```sh
+  yarn add react-native-dot-env
+  # or via npm
+  # npm install --save react-native-dot-env
+  react-native link react-native-dot-env
+  ```
+
+3. Create .env file(s) and add them to .gitignore
+
+  ```sh
+  touch .env
+  echo "API_URL=http://localhost"
+  touch ios/.env.plist
+  echo ".env*" >> .gitignore
+  ```
+
+4. Add newly created `.env.plist` to Xcode project
+  1. open ios/SimpleApp.xcodeproj
+  2. In Project navigator right click on project `SimpleApp` (root item) and choose `Add Files to "SimpleApp"`
+  3. Add the newly created `.env.plist` (in MacOS you can show hidden file with `⌘+shift+.`)
+
+5. Add `Run script` in Project `Build phases` (TODO add example image)
+
+  ```sh
+  node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT
+  ```
+
+6. Run App
+
+  ```sh
+  react-native run-ios
+  ```
+
+<!--
 ### Mostly automatic installation
 
 `$ react-native link react-native-dot-env`
 
 ### Manual installation
 
+
+../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT
 
 #### iOS
 
@@ -50,4 +120,4 @@ import RNDotEnv from 'react-native-dot-env';
 // TODO: What to do with the module?
 RNDotEnv;
 ```
-  # react-native-dot-env
+  # react-native-dot-env -->
