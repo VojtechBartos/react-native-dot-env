@@ -20,7 +20,7 @@ const variables = dotenv
 const plistContent = plist.build(variables)
 
 // saving plist file to chosen destination
-const destination = path.join(dest, `${env}.plist`)
+const destination = path.join(dest, `${path.basename(env)}.plist`)
 fs.writeFile(destination, plist.build(variables), err => {
   if (err)
     return console.log(`react-native-dot-env: ${err}`)
