@@ -2,6 +2,8 @@
 
 Add .env support to your react-native application without exposing them in JavaScript bundle.
 
+**NOTE: Android not supported yet, feel free to contribute :)**
+
 ## Motivation
 
 TBD
