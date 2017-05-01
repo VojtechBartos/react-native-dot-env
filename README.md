@@ -22,7 +22,7 @@ npm install --save react-native-dot-env
 react-native link react-native-dot-env
 ```
 
-### Manually
+### Manually link
 
 #### iOS with CocoaPods
 
@@ -57,8 +57,7 @@ Sorry, Android is not supported yet.
 3. Create .env file(s) and add them to .gitignore
 
   ```sh
-  touch .env
-  echo "API_URL=http://localhost"
+  echo "API_URL=http://localhost" > .env
   touch ios/.env.plist
   echo ".env*" >> .gitignore
   ```
@@ -69,7 +68,9 @@ Sorry, Android is not supported yet.
   - In Project navigator right click on project `SimpleApp` (root item) and choose `Add Files to "SimpleApp"`
   -  Add the newly created `.env.plist` (in MacOS you can show hidden file with `⌘+shift+.`)
 
-5. Add `Run script` in Project `Build phases` (TODO add example image)
+5. Add `Run script` in Project `Build phases`
+
+  - it has to be above `Copy Bundle resources` (see attached image)
 
   ```sh
   node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT
