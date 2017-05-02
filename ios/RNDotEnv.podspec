@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license = package["license"]
   s.author = { "Vojtech Bartos" => "hi@vojtech.me" }
   s.platform = :ios, "8.0"
-  s.source = { :git => "https://github.com/VojtechBartos/react-native-dot-env.git", :tag => s.version }
+  s.source = { :git => "https://github.com/VojtechBartos/react-native-dot-env.git", :tag => "v#{s.version}" }
   s.source_files  = "**/*.{h,m}"
   s.requires_arc = true
 
