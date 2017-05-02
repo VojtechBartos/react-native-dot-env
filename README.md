@@ -1,12 +1,11 @@
 # React Native dotenv
 
-Add `.env` support to your react-native application without exposing them in JavaScript bundle.
+Add `.env` support to your react-native application without including credentials in JavaScript bundle.
 
 [![npm version](https://img.shields.io/npm/v/react-native-dot-env.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dot-env)
 [![npm downloads](https://img.shields.io/npm/dt/react-native-dot-env.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dot-env)
 
-Package that loads environment variables from a `.env` file into `process.env`. It's actually not bundling credentials to JavaScript bundle, it's using native platform way how to store
-configuration/application data and the credentials are bundled with native code. It's much more secure way when your application is not just using pre-bundled JavaScript bundle, but also downloading updated JavaScript bundles for S3 for example. You can easily use `.env` file and let build process create platform specific configuration files.
+Package that loads environment variables from a `.env` file into `process.env`. Credentials are not included in the JavaScript bundle, instead credentials that are bundled in the native app are exposed to the Javascript bundle. It's a much more secure way for you application to access credentials, especially when JavaScript bundles are being remotely downloaded. You can easily use `.env` file and let build process create platform specific configuration files.
 
 **NOTE: Android not supported yet, feel free to contribute :)**
 
@@ -68,13 +67,13 @@ Sorry, Android is not supported yet.
 
   - `open ios/SimpleApp.xcodeproj`
   - In Project navigator right click on project `SimpleApp` (root item) and choose `Add Files to "SimpleApp"`
-  -  Add the newly created `.env.plist` (in MacOS you can show hidden file with `⌘+shift+.`)
+  - Add the newly created `.env.plist` (in MacOS you can show hidden files with `⌘+shift+.`)
 
   ![Add file](docs/add_file.png)
 
 5. Add `Run script` in Project `Build phases`
 
-  - it has to be above `Copy Bundle resources` (see attached image)
+  - It has to be before `Copy Bundle resources` (see image)
 
   ```sh
   node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT
