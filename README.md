@@ -2,11 +2,10 @@
 
 Add .env support to your react-native application without exposing them in JavaScript bundle.
 
+Package that loads environment variables from a `.env` file into `process.env`. It's actually not bundling credentials to JavaScript bundle, it's using native platform way how to store
+configuration/application data and the credentials are bundled with native code. It's much more secure way when your application is not just using pre-bundled JavaScript bundle, but also downloading updated JavaScript bundles for S3 for example. You can easily use `.env` file and let build process create platform specific configuration files.
+
 **NOTE: Android not supported yet, feel free to contribute :)**
-
-## Motivation
-
-TBD
 
 ## Installation
 
