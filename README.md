@@ -5,7 +5,7 @@ Add `.env` support to your react-native application without including credential
 [![npm version](https://img.shields.io/npm/v/react-native-dot-env.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dot-env)
 [![npm downloads](https://img.shields.io/npm/dt/react-native-dot-env.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dot-env)
 
-Package that loads environment variables from a `.env` file into `process.env`. Credentials are not included in the JavaScript bundle, instead credentials that are bundled in the native app are exposed to the Javascript bundle. It's a much more secure way for you application to access credentials, especially when JavaScript bundles are being remotely downloaded. You can easily use `.env` file and let build process create platform specific configuration files.
+Package that loads environment variables from a `.env` file into `process.env`. Credentials are not included in the JavaScript bundle, instead credentials that are bundled in the native app are exposed to the Javascript. It's a much more secure way for you application to access credentials, especially when JavaScript bundles are being remotely downloaded. You can easily use `.env` file and let build process create platform specific configuration files.
 
 **NOTE: Android not supported yet, feel free to contribute :)**
 
