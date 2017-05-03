@@ -69,7 +69,7 @@ Sorry, Android is not supported yet.
   - In Project navigator right click on project `SimpleApp` (root item) and choose `Add Files to "SimpleApp"`
   - Add the newly created `.env.plist` (in MacOS you can show hidden files with `⌘+shift+.`)
 
-  ![Add file](docs/add_file.png)
+  ![Add file](https://raw.githubusercontent.com/VojtechBartos/react-native-dot-env/master/docs/add_file.png)
 
 5. Add `Run script` in Project `Build phases`
 
@@ -79,7 +79,7 @@ Sorry, Android is not supported yet.
   node ../node_modules/react-native-dot-env/cli.js -e ../.env -d $SRCROOT
   ```
 
-  ![Build phases](docs/build_phases.png)
+  ![Build phases](https://raw.githubusercontent.com/VojtechBartos/react-native-dot-env/master/docs/build_phases.png)
 
 6. Add to application source code
 
